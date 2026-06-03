@@ -19,7 +19,7 @@ async function bootstrap() {
 
   app.enableCors({
     origin:
-      'https://frontmeet-4rcr-aqoxt7tmv-alyadevs-projects-55340601.vercel.app/', // Ajoute 5173 par sécurité
+      'https://frontmeet-4rcr-aqoxt7tmv-alyadevs-projects-55340601.vercel.app', // Ajoute 5173 par sécurité
     methods: 'GET,HEAD,PUT,PATCH,POST,DELETE,OPTIONS',
     allowedHeaders: 'Content-Type, Accept, Authorization',
   });
