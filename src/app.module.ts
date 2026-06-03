@@ -3,7 +3,7 @@ import { MongooseModule } from '@nestjs/mongoose';
 import { AuthModule } from './auth/auth.module';
 
 import * as dotenv from 'dotenv';
-import { LogsModule } from './logs/log.Module';
+
 
 import { ConfigModule } from '@nestjs/config';
 import { ScheduleModule } from '@nestjs/schedule/dist/schedule.module';
@@ -27,7 +27,6 @@ dotenv.config();
     MeetingsModule,
     AuthModule,
     UsersModule,
-    LogsModule,
     MeetingModule,
     GatewayModule,
     ScheduledMeetingModule,
