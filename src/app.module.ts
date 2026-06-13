@@ -12,10 +12,10 @@ import { MeetingModule } from './Meetings/Meeting.module';
 import { ScheduledMeetingModule } from './Meetings/scheduled-meeting.module';
 import { JitsiStatusModule } from './jitsi-status/jicofo.module';
 import { UsersModule } from './users/user.module';
-import { TelecomModule } from './telecom/telecom.module';
+
 import { NotificationsModule } from './notifications/Notifications.module';
 import { MeetingsModule } from './MeetingIA/MeetingIA.module';
-import { TwilioModule } from './twilio/twilio.module';
+
 
 dotenv.config();
 
@@ -30,8 +30,6 @@ dotenv.config();
     MeetingModule,
     GatewayModule,
     ScheduledMeetingModule,
-    TelecomModule,
-    TwilioModule,
     NotificationsModule,
     JitsiStatusModule.forRoot({
       videobridgeHost: process.env.JITSI_VIDEOBRIDGE_HOST ?? 'localhost',
@@ -43,7 +41,6 @@ dotenv.config();
       jicofoPort: parseInt(process.env.JITSI_JICOFO_PORT ?? '8888', 10),
       timeout: parseInt(process.env.JITSI_TIMEOUT ?? '5000', 10),
     }),
-    TwilioModule,
   ],
 })
 export class AppModule {}
