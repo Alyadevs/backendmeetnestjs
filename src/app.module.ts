@@ -18,11 +18,12 @@ import { MeetingsModule } from './MeetingIA/MeetingIA.module';
 
 
 dotenv.config();
-
+console.log('MONGO_URI =', process.env.MONGO_URI);
 @Module({
   imports: [
-    MongooseModule.forRoot(process.env.MONGO_URI || ''),
     ConfigModule.forRoot({ isGlobal: true , envFilePath: '.env',}),
+
+    MongooseModule.forRoot(process.env.MONGO_URI || ''),
     ScheduleModule.forRoot(),
     MeetingsModule,
     AuthModule,
