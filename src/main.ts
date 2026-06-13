@@ -18,14 +18,13 @@ async function bootstrap() {
   const app = await NestFactory.create(AppModule);
 
   app.enableCors({
-    origin:
-      'https://frontmeet-4rcr-aqoxt7tmv-alyadevs-projects-55340601.vercel.app', // Ajoute 5173 par sécurité
+    origin: 'https://frontmeet.vercel.app', // Ajoute 5173 par sécurité
     methods: 'GET,HEAD,PUT,PATCH,POST,DELETE,OPTIONS',
     allowedHeaders: 'Content-Type, Accept, Authorization',
   });
   app.useGlobalPipes(new ValidationPipe({ transform: true, whitelist: true }));
   await app.listen(process.env.PORT || 3000, '0.0.0.0');
   console.log(`Server running on port ${process.env.PORT || 3000}`);
-  console.log(`📡 WebSocket Gateway disponible sur: ws://localhost:3000/chat`);
+ // console.log(`📡 WebSocket Gateway disponible sur: ws://localhost:3000/chat`);
 }
 bootstrap();

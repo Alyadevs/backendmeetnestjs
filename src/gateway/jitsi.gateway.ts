@@ -30,7 +30,7 @@ import { MeetingService } from 'src/Meetings/Meeting.service';
  */
 @WebSocketGateway({
   cors: {
-    origin: process.env.FRONTEND_URL || 'http://localhost:3000',
+    origin: process.env.FRONTEND_URL || 'http://backendmeetnestjs.onrender.com',
     credentials: true,
   },
   namespace: '/jitsi',
